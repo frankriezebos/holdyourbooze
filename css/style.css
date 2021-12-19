@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+button {
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 2px solid #00F0FF;
+  color: #FF238D;
+  display: inline-block;
+  width: 100%;
+  margin-top: 15px;
+}
+
+button.bg-pink, button.bg-blue {
+  border: none;
+}
+
+.button-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 15px;
+          column-gap: 15px;
+  row-gap: 15px;
+}
+
+.button-group button {
+  margin-top: 0;
+}
+
+form input {
+  width: calc(100% - 30px);
+  padding: 15px;
+  border-radius: 10px;
+  background-color: rgba(53, 53, 53, 0.5);
+  border: none;
+  color: white;
+  margin-top: 15px;
+}
+
+form input::-webkit-input-placeholder {
+  color: white;
+}
+
+form input:-ms-input-placeholder {
+  color: white;
+}
+
+form input::-ms-input-placeholder {
+  color: white;
+}
+
+form input::placeholder {
+  color: white;
+}
+
+form input[type="submit"] {
+  width: 100%;
+}
+
+form input[type="submit"] + button {
+  width: 100%;
+  margin-left: 0;
+  margin-top: 15px;
+}
+
+form input[type="checkbox"] {
+  background-color: transparent;
+  border: 2px solid #FF238D;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 0;
+  padding: 12px;
+}
+
+form input[type="checkbox"]:checked {
+  position: relative;
+}
+
+form input[type="checkbox"]:checked:before {
+  content: '';
+  background-image: url("../img/check.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 15px;
+  position: absolute;
+  left: 2px;
+  right: 0;
+  top: 5px;
+}
+
+form label {
+  text-transform: uppercase;
+  padding-left: 10px;
+}
+
+form .checkbox-wrap {
+  padding-bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+form .checkbox-wrap:first-of-type {
+  padding-top: 15px;
+}
+
+form .input-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 15px;
+          column-gap: 15px;
+  row-gap: 15px;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  color: #00F0FF;
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
+  position: relative;
+}
+
+input, button {
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.bg-pink {
+  background-color: #FF238D;
+  color: black;
+}
+
+.bg-blue {
+  background-color: #00F0FF;
+  color: black;
+}
+
+.color-blue {
+  color: #00F0FF;
+}
+
+.color-pink {
+  color: #FF238D;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+ul li {
+  margin-top: 25px;
+}
+
+ul li:first-of-type {
+  margin-top: 0;
+}
+
+ul.checklist li {
+  position: relative;
+  padding-left: 35px;
+}
+
+ul.checklist li:before {
+  content: '';
+  background-image: url("../img/pink-check.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.video-bg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+}
+
+.video-bg video {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.video-bg:before {
+  content: '';
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.header {
+  text-align: center;
+  padding: 15px;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  left: 0;
+  right: 0;
+}
+
+main {
+  margin-top: 100px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 15px;
+  z-index: 1;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+  max-width: 280px;
+  position: relative;
+  z-index: 1;
+}
+
+footer {
+  position: relative;
+  z-index: 1;
+}
+
+section {
+  margin: 15px;
+  border: 2px solid #FF238D;
+  border-radius: 12px;
+  padding: 15px;
+}
+
+.section-icon {
+  width: 100%;
+  height: auto;
+  max-width: 28px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.section-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 2px solid rgba(255, 35, 141, 0.2);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.section-header .section-title {
+  margin-left: 10px;
+}
+/*# sourceMappingURL=style.css.map */

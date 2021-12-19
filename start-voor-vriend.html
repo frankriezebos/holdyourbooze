@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hold Your Booze</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="video-bg">
+        <video width="100%" height="100%" muted background autoplay loop poster="img/party.jpg">
+            <source src="img/video.mp4" type="video/mp4">
+          </video>
+    </div>
+
+    <header class="header">
+        <img src="img/logo.svg" alt="Hold Your Booze logo" class="logo">
+    </header>
+
+    <main>
+        <form action="" name="start_for_friend">
+            <section class="form">
+                <section-header class="section-header">
+                    <section-icon>
+                        <img src="img/user.svg" alt="Register icon" class="section-icon">
+                    </section-icon>
+
+                    <section-title class="section-title">
+                        <h2>Profiel van je vriend(in)</h2>
+                    </section-title>
+                </section-header>
+
+                <section-body>
+                    <label for="photo">Foto</label>
+                    <input type="file" name="photo" id="photo" placeholder="Foto" />
+                    
+                    <div class="input-group">
+                        <input type="text" name="name" id="name" placeholder="Naam" />
+                        <input type="text" name="nickname" id="nickname" placeholder="Schuilnaam" />
+                    </div>
+
+                    
+                    <input type="text" name="age" id="age" placeholder="Leeftijd" />
+
+                
+                    <input type="text" name="location" id="location" placeholder="Waar zijn jullie?" />
+                    <input type="text" name="city" id="city" placeholder="Welke stad?" />
+
+                    <div class="checkbox-wrap">
+                        <input type="checkbox" name="resposible" id="resposible">
+                        <label for="resposible">Drink verantwoord</label>
+                    </div>
+
+                    <div class="checkbox-wrap">
+                        <input type="checkbox" name="mate" id="mate">
+                        <label for="mate">geniet maar drink met mate</label>
+                    </div>
+
+                    <input type="submit" value="Let's partyyyy!!!" class="bg-blue">
+                </section-body>
+            </section>
+
+            <section>
+                <section-footer>
+                    <button-group class="button-group">
+                        <button>Terug</button>
+                        <button>Instellingen</button>
+                    </button-group>
+                </section-footer>
+            </section>
+        </form>
+    </main>
+    
+</body>
+</html> 

@@ -1,0 +1,74 @@
+form {
+    input {
+        width: calc(100% - 30px);
+        padding: 15px;
+        border-radius: 10px;
+        background-color: $darkgray;
+        border: none;
+        color: white;
+        margin-top: 15px;
+
+        &::placeholder {
+            color: white;
+        }
+
+        &[type="submit"] {
+            width: 100%;
+
+            &+button {
+                width: 100%;
+                margin-left: 0;
+                margin-top: 15px;
+            }
+        }
+
+        &[type="checkbox"] {
+            background-color: transparent;
+            border: 2px solid $pink;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 0;
+            padding: 12px;
+
+            &:checked {
+                position: relative;
+
+                &:before {
+                    content: '';
+                    background-image: url('../img/check.svg');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    width: 20px;
+                    height: 15px;
+                    position: absolute;
+                    left: 2px;
+                    right: 0;
+                    top: 5px;
+                }
+            }
+        }
+    }
+
+    label {
+        text-transform: uppercase;
+        padding-left: 10px;
+    }
+
+    .checkbox-wrap {
+        padding-bottom: 15px;
+        display: flex;
+        align-items: center;
+
+
+        &:first-of-type {
+            padding-top: 15px;
+        }
+    }
+
+    .input-group {
+        display: flex;
+        column-gap: 15px;
+        row-gap: 15px;
+    }
+}
