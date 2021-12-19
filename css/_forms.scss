@@ -13,6 +13,7 @@ form {
         }
 
         &[type="submit"] {
+            cursor: pointer;
             width: 100%;
 
             &+button {
