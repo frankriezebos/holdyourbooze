@@ -31,6 +31,7 @@ form {
             height: 20px;
             border-radius: 0;
             padding: 12px;
+            margin-top: 0;
 
             &:checked {
                 position: relative;
@@ -60,10 +61,15 @@ form {
         padding-bottom: 15px;
         display: flex;
         align-items: center;
+        margin-top: 20px;
 
 
         &:first-of-type {
             padding-top: 15px;
+        }
+
+        &:last-of-type {
+            margin-top: 0px;
         }
     }
 
@@ -71,5 +77,75 @@ form {
         display: flex;
         column-gap: 15px;
         row-gap: 15px;
+    }
+
+    #preview {
+        width: 0;
+        height: 52px;
+        border: none;
+        border-radius: 7px;
+        opacity: 0;
+        object-fit: cover;
+
+        &.show {
+            width: 50px;
+            opacity: 1;
+        }
+    }
+
+    input[type="file"] {
+        display: none;
+    }
+
+    .photo-upload {
+        width: 100%;
+        // padding: 15px;
+        border-radius: 10px;
+        background-color: $pink;
+        border: none;
+        color: black;
+        font-weight: bold;
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+    }
+
+    .limit {
+        margin: 20px 0;
+    }
+
+    .limit-amount {
+        display: flex;
+        align-items: center;
+
+        .minus, .plus {
+            color: white;
+            font-weight: bold;
+        }
+
+        .amount {
+            width: 25px;
+            height: 25px;
+            background-color: $pink;
+            background: linear-gradient(138.45deg, #FF007A 25.68%, #00F0FF 74.11%);
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            margin: 0 8px;
+            text-align: center;
+        }
+
+        .glass-icon {
+            margin-left: 20px;
+        }
+
+        .glass {
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-left: 10px;
+        }
     }
 }

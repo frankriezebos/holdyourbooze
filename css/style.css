@@ -76,6 +76,7 @@ form input[type="checkbox"] {
   height: 20px;
   border-radius: 0;
   padding: 12px;
+  margin-top: 0;
 }
 
 form input[type="checkbox"]:checked {
@@ -108,10 +109,15 @@ form .checkbox-wrap {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 20px;
 }
 
 form .checkbox-wrap:first-of-type {
   padding-top: 15px;
+}
+
+form .checkbox-wrap:last-of-type {
+  margin-top: 0px;
 }
 
 form .input-group {
@@ -121,6 +127,90 @@ form .input-group {
   -webkit-column-gap: 15px;
           column-gap: 15px;
   row-gap: 15px;
+}
+
+form #preview {
+  width: 0;
+  height: 52px;
+  border: none;
+  border-radius: 7px;
+  opacity: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+form #preview.show {
+  width: 50px;
+  opacity: 1;
+}
+
+form input[type="file"] {
+  display: none;
+}
+
+form .photo-upload {
+  width: 100%;
+  border-radius: 10px;
+  background-color: #FF238D;
+  border: none;
+  color: black;
+  font-weight: bold;
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+form .limit {
+  margin: 20px 0;
+}
+
+form .limit-amount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+form .limit-amount .minus, form .limit-amount .plus {
+  color: white;
+  font-weight: bold;
+}
+
+form .limit-amount .amount {
+  width: 25px;
+  height: 25px;
+  background-color: #FF238D;
+  background: linear-gradient(138.45deg, #FF007A 25.68%, #00F0FF 74.11%);
+  border-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  font-weight: bold;
+  margin: 0 8px;
+  text-align: center;
+}
+
+form .limit-amount .glass-icon {
+  margin-left: 20px;
+}
+
+form .limit-amount .glass {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-left: 10px;
 }
 
 html, body {
