@@ -164,6 +164,12 @@ form .photo-upload {
           align-items: center;
 }
 
+@media (max-width: 600px) {
+  form label[for="photo"] {
+    font-size: 14px;
+  }
+}
+
 form .limit {
   margin: 20px 0;
 }
@@ -307,7 +313,7 @@ ul.checklist li:before {
 
 .video-bg:before {
   content: '';
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: #090a6a87;
   position: absolute;
   left: 0;
   right: 0;
@@ -321,11 +327,16 @@ ul.checklist li:before {
 .header {
   text-align: center;
   padding: 15px;
-  position: fixed;
-  top: 0;
   z-index: 1;
-  left: 0;
-  right: 0;
+}
+
+@media (min-height: 860px) {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
 }
 
 main {
@@ -376,5 +387,67 @@ section {
 
 .section-header .section-title {
   margin-left: 10px;
+}
+
+section-footer .button-group {
+  padding: 0px 15px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.tenor-gif-embed {
+  border-radius: 14px;
+}
+
+.amount-of-glasses {
+  background: -webkit-gradient(linear, left top, right top, color-stop(1.42%, #23F2FF), to(#FF007A));
+  background: linear-gradient(90deg, #23F2FF 1.42%, #FF007A 100%);
+  border-radius: 11px;
+  font-size: 22px;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 20px;
+}
+
+.amount-of-glasses .amount {
+  width: 100%;
+}
+
+.amount-of-glasses .amount p {
+  margin-top: 0;
+}
+
+.amount-of-glasses .minus, .amount-of-glasses .plus {
+  border-radius: 100px;
+  font-size: 60px;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.2);
+  mix-blend-mode: overlay;
+  width: 85px;
+  height: 85px;
+  color: #FFF;
+  cursor: pointer;
+}
+
+.amount-of-glasses .plus {
+  margin-left: 15px;
+}
+
+.amount-of-glasses * {
+  font-size: 22px;
 }
 /*# sourceMappingURL=style.css.map */

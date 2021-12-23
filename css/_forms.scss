@@ -110,6 +110,13 @@ form {
         align-items: center;
     }
 
+    label[for="photo"] {
+        @media (max-width: 600px) {
+            font-size: 14px;
+        }
+        
+    }
+
     .limit {
         margin: 20px 0;
     }
