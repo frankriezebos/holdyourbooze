@@ -14,6 +14,13 @@ button {
     &.bg-blue {
         border: none;
     }
+
+    &.small {
+        padding: 0px 10px;
+        width: auto!important;
+        margin: 3px 0;
+        font-size: 13px;
+    }
 }
 
 .button-group {

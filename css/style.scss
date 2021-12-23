@@ -3,6 +3,7 @@
 @import 'variables';
 @import 'buttons';
 @import 'forms';
+@import 'users';
 
 html,body {
     margin: 0;
@@ -156,6 +157,11 @@ section {
     padding: 15px;
 }
 
+section-icon {
+    display: flex;
+    align-items: center;
+}
+
 .section-icon {
     width: 100%;
     height: auto;
@@ -200,12 +206,58 @@ section-footer {
     align-items: center;
     flex-wrap: wrap;
     padding: 20px;
+    position: relative;
 
     .amount {
         width: 100%;
 
         p {
             margin-top: 0;
+        }
+    }
+
+    #amount,
+    #limit {
+        background: transparent;
+        border: none;
+        color: white;
+        width: 15px;
+    }
+
+    .plusminus-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .finished {
+        transition: all 200ms;
+        opacity: 0;
+        border-radius: 100px;
+        font-size: 60px;
+        font-weight: bold;
+        background: rgba(0, 0, 0, 0.2);
+        mix-blend-mode: overlay;
+        width: 85px;
+        height: 85px;
+        position: absolute;
+        top: 70px;
+        pointer-events: none;
+
+        .finished-check {
+            width: 50px;
+            height: auto;
+            mix-blend-mode: overlay;
+        }
+
+        &.show {
+            opacity: 1;
+        }
+
+        &.enough {
+            position: relative;
+            top: unset;
         }
     }
 
@@ -219,6 +271,12 @@ section-footer {
         height: 85px;
         color: #FFF;
         cursor: pointer;
+        transition: all 200ms;
+
+        &.hide {
+            opacity: 0;
+            pointer-events: none;
+        }
     }
 
     .plus {
@@ -228,4 +286,8 @@ section-footer {
     * {
         font-size: 22px;
     }
+}
+
+.uppercase {
+    text-transform: uppercase;
 }

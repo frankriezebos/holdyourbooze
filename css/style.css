@@ -16,6 +16,13 @@ button.bg-pink, button.bg-blue {
   border: none;
 }
 
+button.small {
+  padding: 0px 10px;
+  width: auto !important;
+  margin: 3px 0;
+  font-size: 13px;
+}
+
 .button-group {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -219,6 +226,55 @@ form .limit-amount .glass {
   margin-left: 10px;
 }
 
+.users .user {
+  position: relative;
+}
+
+.users .user.online:before {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: -5px;
+  background-color: #60FFB2;
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+}
+
+.users .user .user-left {
+  display: inline;
+}
+
+.users .user .user-left .user-left-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-left: 10px;
+}
+
+.users .user .user-left .user-left-inner * {
+  width: 100%;
+}
+
+.users .user .user-left .user-left-inner p {
+  margin: 0;
+}
+
+.users .user .user-name h2 {
+  font-size: 18px;
+}
+
+.users .user .user-image {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 12px;
+  float: left;
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -368,6 +424,15 @@ section {
   padding: 15px;
 }
 
+section-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .section-icon {
   width: 100%;
   height: auto;
@@ -421,6 +486,7 @@ section-footer .button-group {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 20px;
+  position: relative;
 }
 
 .amount-of-glasses .amount {
@@ -429,6 +495,58 @@ section-footer .button-group {
 
 .amount-of-glasses .amount p {
   margin-top: 0;
+}
+
+.amount-of-glasses #amount,
+.amount-of-glasses #limit {
+  background: transparent;
+  border: none;
+  color: white;
+  width: 15px;
+}
+
+.amount-of-glasses .plusminus-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.amount-of-glasses .finished {
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  opacity: 0;
+  border-radius: 100px;
+  font-size: 60px;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.2);
+  mix-blend-mode: overlay;
+  width: 85px;
+  height: 85px;
+  position: absolute;
+  top: 70px;
+  pointer-events: none;
+}
+
+.amount-of-glasses .finished .finished-check {
+  width: 50px;
+  height: auto;
+  mix-blend-mode: overlay;
+}
+
+.amount-of-glasses .finished.show {
+  opacity: 1;
+}
+
+.amount-of-glasses .finished.enough {
+  position: relative;
+  top: unset;
 }
 
 .amount-of-glasses .minus, .amount-of-glasses .plus {
@@ -441,6 +559,13 @@ section-footer .button-group {
   height: 85px;
   color: #FFF;
   cursor: pointer;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.amount-of-glasses .minus.hide, .amount-of-glasses .plus.hide {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .amount-of-glasses .plus {
@@ -449,5 +574,9 @@ section-footer .button-group {
 
 .amount-of-glasses * {
   font-size: 22px;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 /*# sourceMappingURL=style.css.map */
