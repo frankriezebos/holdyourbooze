@@ -21,6 +21,10 @@ button {
         margin: 3px 0;
         font-size: 13px;
     }
+
+    @media (max-width: 480px) {
+        font-size: 14px!important;
+    }
 }
 
 .button-group {
@@ -32,3 +36,46 @@ button {
         margin-top: 0;
     }
 }
+
+.btn-with-icon {
+    position: relative;
+    padding-left: 35px;
+
+    
+
+    &:before {
+        content: '';
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        left: 15px;
+    }
+
+    &.back {
+        &:before {
+            background-image: url('../img/back-blue.svg');
+            width: 35px;
+            height: 35px;
+            top: 10px;
+        }
+    }
+
+    &.settings {
+        &:before {
+            background-image: url('../img/cog-blue.svg');
+            width: 35px;
+            height: 35px;
+            top: 8px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        &:before {
+            width: 25px!important;
+            height: 25px!important;
+            top: 13px!important;
+            left: 5px!important;
+        }
+    }
+}
+

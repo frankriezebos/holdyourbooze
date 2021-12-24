@@ -23,6 +23,12 @@ button.small {
   font-size: 13px;
 }
 
+@media (max-width: 480px) {
+  button {
+    font-size: 14px !important;
+  }
+}
+
 .button-group {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -34,6 +40,42 @@ button.small {
 
 .button-group button {
   margin-top: 0;
+}
+
+.btn-with-icon {
+  position: relative;
+  padding-left: 35px;
+}
+
+.btn-with-icon:before {
+  content: '';
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 15px;
+}
+
+.btn-with-icon.back:before {
+  background-image: url("../img/back-blue.svg");
+  width: 35px;
+  height: 35px;
+  top: 10px;
+}
+
+.btn-with-icon.settings:before {
+  background-image: url("../img/cog-blue.svg");
+  width: 35px;
+  height: 35px;
+  top: 8px;
+}
+
+@media (max-width: 480px) {
+  .btn-with-icon:before {
+    width: 25px !important;
+    height: 25px !important;
+    top: 13px !important;
+    left: 5px !important;
+  }
 }
 
 form input {
@@ -228,6 +270,15 @@ form .limit-amount .glass {
 
 .users .user {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 480px) {
+  .users .user {
+    display: block;
+  }
 }
 
 .users .user.online:before {
@@ -243,6 +294,7 @@ form .limit-amount .glass {
 
 .users .user .user-left {
   display: inline;
+  width: 70%;
 }
 
 .users .user .user-left .user-left-inner {
@@ -260,6 +312,54 @@ form .limit-amount .glass {
 
 .users .user .user-left .user-left-inner p {
   margin: 0;
+}
+
+@media (max-width: 520px) {
+  .users .user .user-left {
+    width: 60%;
+  }
+}
+
+@media (max-width: 480px) {
+  .users .user .user-left {
+    width: 100%;
+  }
+}
+
+.users .user .user-right {
+  width: 30%;
+  font-size: 15px;
+  display: inline;
+}
+
+.users .user .user-right img {
+  float: left;
+}
+
+.users .user .user-right p {
+  margin: 0;
+}
+
+.users .user .user-right .place {
+  padding: 0 20px;
+}
+
+@media (max-width: 520px) {
+  .users .user .user-right {
+    width: 40%;
+  }
+}
+
+@media (max-width: 480px) {
+  .users .user .user-right {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .users .user .user-right img {
+    margin-left: 57px;
+    margin-top: 2px;
+  }
 }
 
 .users .user .user-name h2 {

@@ -1,6 +1,11 @@
 .users {
     .user {
         position: relative;
+        display: flex;
+
+        @media (max-width: 480px) {
+            display: block;
+        }
 
         &.online {
             &:before {
@@ -19,6 +24,7 @@
 
         .user-left {
             display: inline;
+            width: 70%;
 
             .user-left-inner {
                 display: flex;
@@ -33,10 +39,47 @@
                     margin: 0;
                 }
             }
+
+            @media (max-width: 520px) {
+                width: 60%;
+            }
+
+            @media (max-width: 480px) {
+                width: 100%;
+            }
         }
 
         .user-right {
+            width: 30%;
+            font-size: 15px;
+            display: inline;
 
+            img {
+                float: left;
+            }
+
+            p {
+                margin: 0;
+            }
+
+            .place {
+                padding: 0 20px;
+            }
+
+            @media (max-width: 520px) {
+                width: 40%;
+            }
+
+            @media (max-width: 480px) {
+                display: block;
+                width: 100%;
+                margin-top: 10px;
+
+                img {
+                    margin-left: 57px;
+                    margin-top: 2px;
+                }
+            }
         }
 
         .user-name {
