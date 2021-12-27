@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hold Your Booze</title>
     <link rel="stylesheet" href="css/style.css">
+
+    @@include('./components/scripts.html')
 </head>
 <body>
 
@@ -39,16 +41,24 @@
             </section-header>
 
             <section-body>
-                <button class="bg-blue">Start party voor jezelf</button>
-                <button class="bg-pink">Hou bij voor je vriend(in)</button>
-                <button class="color-blue">Instellingen</button>
-                <button>Check online boozers</button>
+                <a href="start.html">
+                    <button class="bg-blue">Start party voor jezelf</button>
+                </a>
+
+                <a href="start-voor-vriend.html">
+                    <button class="bg-pink">Hou bij voor je vriend(in)</button>
+                </a>
+
+                <a href="instellingen.html">
+                    <button class="color-blue">Instellingen</button>
+                </a>
+
+                <a href="socialize.html">
+                    <button>Check online boozers</button>
+                </a>
             </section-body>
         </section>
     </main>
-
-    <script src="js/jquery.min.js"></script>
-    <script type="module" src="js/index.js"></script>
     
 </body>
 </html> 

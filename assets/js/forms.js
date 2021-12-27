@@ -1,0 +1,2 @@
+export function glasses(){var l=$("#amount");if($("#limit").length)var i=$("#limit");$(".plus").click((function(){if($("#limit").length){if(l.val()<i.val()){console.log("amount is below 8");var a=+l.val()+1;l.val(a),console.log(l.val())}}else{a=+l.val()+1;l.val(a)}})),$(".minus").click((function(){if(l.val()>0){var i=+l.val()-1;l.val(i),console.log(l.val())}})),$(".plus").click((function(){$("#limit").length&&l.val()==i.val()&&($(".plus, .minus").addClass("hide"),$(".finished").addClass("show"))}))}
+//# sourceMappingURL=forms.js.map

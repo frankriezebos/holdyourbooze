@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hold Your Booze</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery.min.js"></script>
+<script type="module" src="js/index.js"></script>
+</head>
+
+<body>
+
+    <div class="video-bg">
+        <video width="100%" height="100%" muted background autoplay loop poster="img/party.jpg">
+            <source src="img/video-club.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <header class="header">
+        <img src="img/logo.svg" alt="Hold Your Booze logo" class="logo">
+    </header>
+
+    <main>
+        <section>
+            <section-header class="section-header">
+                <section-icon>
+                    <img src="img/check-red.svg" alt="" class="section-icon">
+                </section-icon>
+
+                <section-title class="section-title">
+                    <h2>Genoeg gedronken!</h2>
+                </section-title>
+            </section-header>
+
+            <section-body class="uppercase">
+                <p>je hebt je limiet bereikt. als je nu meer drinkt, is de kans groot dat je ziek wordt.</p>
+            </section-body>
+        </section>
+
+        <section>
+            <section-header class="section-header">
+                <section-icon>
+                    <img src="img/smily.svg" alt="Happy icon" class="section-icon">
+                </section-icon>
+
+                <section-title class="section-title">
+                    <h2>dans lekker verder!</h2>
+                </section-title>
+            </section-header>
+
+            <section-body class="amount-of-glasses">
+                <div class="amount">
+                    <p>
+                        <input type="text" id="amount" value="8" />/<input type="text" id="limit" value="8" />
+                        aantal glazen
+                    </p>
+                </div>                
+
+                <div class="finished show enough">
+                    <img src="img/check-light.svg" alt="" class="finished-check" />
+                </div>
+            </section-body>
+        </section>
+
+        <section-footer>
+            <button-group class="button-group">
+                <button>Stop</button>
+                <button>Socialize</button>
+            </button-group>
+        </section-footer>
+    </main>
+</body>
+
+</html>

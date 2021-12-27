@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hold Your Booze</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery.min.js"></script>
+<script type="module" src="js/index.js"></script>
+</head>
+<body>
+
+    <div class="video-bg">
+        <video width="100%" height="100%" muted background autoplay loop poster="img/party.jpg">
+            <source src="img/video-club.mp4" type="video/mp4">
+          </video>
+    </div>
+
+    <header class="header">
+        <img src="img/logo.svg" alt="Hold Your Booze logo" class="logo">
+    </header>
+
+    <main>
+        <section class="form">
+            <section-header class="section-header">
+                <section-icon>
+                    <img src="img/play.svg" alt="Register icon" class="section-icon">
+                </section-icon>
+
+                <section-title class="section-title">
+                    <h2>Let the party begin!</h2>
+                </section-title>
+            </section-header>
+
+            <form action="" name="start">
+                <input type="text" name="location" id="location" placeholder="Waar ben je?" />
+                <input type="text" name="city" id="city" placeholder="Welke stad?" />
+
+                <div class="checkbox-wrap">
+                    <input type="checkbox" name="resposible" id="resposible">
+                    <label for="resposible">Drink verantwoord</label>
+                </div>
+
+                <div class="checkbox-wrap">
+                    <input type="checkbox" name="mate" id="mate">
+                    <label for="mate">geniet maar drink met mate</label>
+                </div>
+
+                <input type="submit" value="Let's partyyyy!!!" class="bg-blue">
+            </form>
+        </section>
+
+
+        <section-footer>
+            <button-group class="button-group">
+                <button>Terug</button>
+                <button>Instellingen</button>
+            </button-group>
+        </section-footer>
+    </main>
+    
+</body>
+</html> 

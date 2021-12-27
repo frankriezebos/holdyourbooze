@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hold Your Booze</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery.min.js"></script>
+<script type="module" src="js/index.js"></script>
+
+    <script>
+        function previewFile(input){
+            var file = $("input[type=file]").get(0).files[0];
+    
+            if(file){
+                var reader = new FileReader();
+    
+                reader.onload = function(){
+                    $("#preview").attr("src", reader.result);
+                    $("#preview").addClass('show');
+                }
+    
+                reader.readAsDataURL(file);
+
+                
+            }
+        }
+    </script>
+
+</head>
+<body>
+
+    <div class="video-bg">
+        <video width="100%" height="100%" muted background autoplay loop poster="img/party.jpg">
+            <source src="img/video-club.mp4" type="video/mp4">
+          </video>
+    </div>
+
+    <header class="header">
+        <img src="img/logo.svg" alt="Hold Your Booze logo" class="logo">
+    </header>
+
+    <main>
+        <form action="" name="start_for_friend">
+            <section class="form">
+                <section-header class="section-header">
+                    <section-icon>
+                        <img src="img/user.svg" alt="Register icon" class="section-icon">
+                    </section-icon>
+
+                    <section-title class="section-title">
+                        <h2>Mijn account</h2>
+                    </section-title>
+                </section-header>
+
+                <section-body>
+                    
+
+                    <div class="input-group">
+                        <div class="photo-upload">
+                            <img id="preview" />
+                            <label for="photo">Hier foto uploaden</label>
+                        </div>
+                        <input type="file" id="photo" name="photo" accept="image/*" onchange="previewFile(this);">
+                        <input type="text" name="name" id="name" placeholder="Naam" />
+                    </div>
+                    
+                    <div class="input-group">
+                        <input type="text" name="nickname" id="nickname" placeholder="Schuilnaam" />
+                        <input type="number" name="age" id="age" maxlength="2" placeholder="Leeftijd" />
+                    </div>
+
+                    <div class="limit">
+                        <h2>Wat is mijn limiet?</h2>
+                        <p class="color-pink">(Hoeveel kan ik drinken zonder ziek te worden?)</p>
+
+                        <div class="limit-amount">
+                            <div class="minus">-</div>
+                            <input type="number" name="amount_of_glasses" id="amount" class="amount" value="0" />
+                            <div class="plus">+</div>
+                            <div class="glass-icon">
+                                <img src="img/glass.svg" alt="">
+                            </div>
+                            <div class="glass color-blue">Glazen</div>
+                        </div>
+                    </div>
+
+                    <input type="submit" value="Opslaan" class="bg-blue">
+                </section-body>
+            </section>
+
+            <section-footer>
+                <button-group class="button-group">
+                    <button>Terug</button>
+                    <button>Start party!</button>
+                </button-group>
+            </section-footer>
+        </form>
+    </main>
+
+
+    
+</body>
+</html> 

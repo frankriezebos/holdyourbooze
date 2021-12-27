@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hold Your Booze</title>
     <link rel="stylesheet" href="css/style.css">
+
+    @@include('./components/scripts.html')
 </head>
 <body>
 
@@ -43,14 +45,20 @@
                 <input type="password" name="password" id="password" placeholder="Wachtwoord" />
 
                 <input type="submit" value="Registreren" class="bg-blue">
-                <button class="bg-pink">Inloggen</button>
-                <button>Doorgaan zonder account</button>
+
+                
             </form>
+
+
+            <a href="login.html">
+                <button class="bg-pink">Inloggen</button>
+            </a>
+
+            <a href="doorgaan-zonder-account.html">
+                <button>Doorgaan zonder account</button>
+            </a>
         </section>
     </main>
-
-    <script src="js/jquery.min.js"></script>
-    <script type="module" src="js/index.js"></script>
     
 </body>
 </html> 
