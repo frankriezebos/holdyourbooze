@@ -1,0 +1,2 @@
+function previewFile(e){var r=$("input[type=file]").get(0).files[0];if(r){var i=new FileReader;i.onload=function(){$("#preview").attr("src",i.result),$("#preview").addClass("show"),console.log($("#preview").attr("src"))},i.readAsDataURL(r)}}
+//# sourceMappingURL=previewFile.js.map

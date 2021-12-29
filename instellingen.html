@@ -8,26 +8,6 @@
     <link rel="stylesheet" href="css/style.css">
 
     @@include('./components/scripts.html')
-
-    <script>
-        function previewFile(input){
-            var file = $("input[type=file]").get(0).files[0];
-    
-            if(file){
-                var reader = new FileReader();
-    
-                reader.onload = function(){
-                    $("#preview").attr("src", reader.result);
-                    $("#preview").addClass('show');
-                }
-    
-                reader.readAsDataURL(file);
-
-                
-            }
-        }
-    </script>
-
 </head>
 <body>
 
@@ -42,61 +22,55 @@
     </header>
 
     <main>
-        <form action="" name="start_for_friend">
-            <section class="form">
-                <section-header class="section-header">
-                    <section-icon>
-                        <img src="img/user.svg" alt="Register icon" class="section-icon">
-                    </section-icon>
+        <section class="form">
+            <section-header class="section-header">
+                <section-icon>
+                    <img src="img/user.svg" alt="Register icon" class="section-icon">
+                </section-icon>
 
-                    <section-title class="section-title">
-                        <h2>Mijn account</h2>
-                    </section-title>
-                </section-header>
+                <section-title class="section-title">
+                    <h2>Mijn account</h2>
+                </section-title>
+            </section-header>
 
-                <section-body>
-                    
+            <section-body>
+                <div class="input-group">
+                    <div class="photo-upload">
+                        <img id="preview" />
+                        <label for="photo">Hier foto uploaden</label>
+                    </div>
+                    <input type="file" id="photo" name="photo" accept="image/*" onchange="previewFile(this);">
+                    <input type="text" name="name" id="name" placeholder="Naam" />
+                </div>
+                
+                <div class="input-group">
+                    <input type="text" name="nickname" id="nickname" placeholder="Schuilnaam" />
+                    <input type="number" name="age" id="age" maxlength="2" placeholder="Leeftijd" />
+                </div>
 
-                    <div class="input-group">
-                        <div class="photo-upload">
-                            <img id="preview" />
-                            <label for="photo">Hier foto uploaden</label>
+                <div class="limit">
+                    <h2>Wat is mijn limiet?</h2>
+                    <p class="color-pink">(Hoeveel kan ik drinken zonder ziek te worden?)</p>
+
+                    <div class="limit-amount">
+                        <div class="minus">-</div>
+                        <input type="number" name="amount_of_glasses" id="amount" class="amount" value="0" />
+                        <div class="plus">+</div>
+                        <div class="glass-icon">
+                            <img src="img/glass.svg" alt="">
                         </div>
-                        <input type="file" id="photo" name="photo" accept="image/*" onchange="previewFile(this);">
-                        <input type="text" name="name" id="name" placeholder="Naam" />
+                        <div class="glass color-blue">Glazen</div>
                     </div>
-                    
-                    <div class="input-group">
-                        <input type="text" name="nickname" id="nickname" placeholder="Schuilnaam" />
-                        <input type="number" name="age" id="age" maxlength="2" placeholder="Leeftijd" />
-                    </div>
+                </div>
+            </section-body>
+        </section>
 
-                    <div class="limit">
-                        <h2>Wat is mijn limiet?</h2>
-                        <p class="color-pink">(Hoeveel kan ik drinken zonder ziek te worden?)</p>
-
-                        <div class="limit-amount">
-                            <div class="minus">-</div>
-                            <input type="number" name="amount_of_glasses" id="amount" class="amount" value="0" />
-                            <div class="plus">+</div>
-                            <div class="glass-icon">
-                                <img src="img/glass.svg" alt="">
-                            </div>
-                            <div class="glass color-blue">Glazen</div>
-                        </div>
-                    </div>
-
-                    <input type="submit" value="Opslaan" class="bg-blue">
-                </section-body>
-            </section>
-
-            <section-footer>
-                <button-group class="button-group">
-                    <button>Terug</button>
-                    <button>Start party!</button>
-                </button-group>
-            </section-footer>
-        </form>
+        <section-footer>
+            <button-group class="button-group">
+                <button>Terug</button>
+                <button>Start party!</button>
+            </button-group>
+        </section-footer>
     </main>
 
 

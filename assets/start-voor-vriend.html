@@ -10,25 +10,7 @@
     <script src="js/jquery.min.js"></script>
 <script src="js/localstorage.min.js"></script>
 <script type="module" src="js/index.js"></script>
-
-    <script>
-        function previewFile(input){
-            var file = $("input[type=file]").get(0).files[0];
-    
-            if(file){
-                var reader = new FileReader();
-    
-                reader.onload = function(){
-                    $("#preview").attr("src", reader.result);
-                    $("#preview").addClass('show');
-                }
-    
-                reader.readAsDataURL(file);
-
-                
-            }
-        }
-    </script>
+<script src="js/previewFile.js"></script>
 
 </head>
 <body>
